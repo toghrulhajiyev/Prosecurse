@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  font-family: "Open Sans", sans-serif; }
+
+#main .clients-heading, #main #about-us .about-heading, #main #get-in-touch .section-heading {
+  max-width: 500px;
+  margin: 0 auto; }
+
+#header #showcase .showcase-content .primary-btn, #header #showcase .showcase-content .light-btn, #footer .consultation-container .contact {
+  border: 1px solid #784f33;
+  font-weight: 600;
+  border-radius: 2.3125em;
+  padding: 0.625em 2.25em;
+  text-decoration: none;
+  transition: all 0.3s linear; }
+  #header #showcase .showcase-content .primary-btn:hover, #header #showcase .showcase-content .light-btn:hover, #footer .consultation-container .contact:hover {
+    text-decoration: none; }
+
+#header {
+  background-image: url("../img/header-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 8em; }
+  #header .navbar {
+    padding: 1em 0; }
+    #header .navbar .logo-hamburger {
+      display: flex;
+      justify-content: space-between; }
+      #header .navbar .logo-hamburger .icons {
+        display: flex;
+        padding: 1em 0;
+        align-items: center; }
+        #header .navbar .logo-hamburger .icons .icon {
+          padding-left: 0.8em; }
+        #header .navbar .logo-hamburger .icons .hamburger {
+          display: none;
+          border: none;
+          background-color: transparent;
+          font-size: 20px;
+          cursor: pointer; }
+        #header .navbar .logo-hamburger .icons .search,
+        #header .navbar .logo-hamburger .icons .cart {
+          display: none; }
+    #header .navbar .nav-menu {
+      display: flex;
+      padding: 1em 0;
+      align-items: center;
+      margin-bottom: 0; }
+      #header .navbar .nav-menu .nav-item {
+        padding-right: 1.3125em; }
+      #header .navbar .nav-menu .nav-link {
+        position: relative;
+        color: #737373;
+        font-weight: 600; }
+        #header .navbar .nav-menu .nav-link:hover {
+          text-decoration: none; }
+        #header .navbar .nav-menu .nav-link::before {
+          content: "";
+          width: 0%;
+          height: 2px;
+          background-color: #737373;
+          transition: all 0.2s linear;
+          position: absolute;
+          top: 25px; }
+        #header .navbar .nav-menu .nav-link:hover::before {
+          width: 100%; }
+  #header #showcase {
+    margin-top: 4em; }
+    #header #showcase .showcase-content .showcase-header {
+      font-family: "Martel", serif;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 3.625em;
+      color: #252b42;
+      line-height: 65px; }
+    #header #showcase .showcase-content .showcase-paragraph {
+      font-family: "Montserrat", sans-serif;
+      color: #737373;
+      font-weight: 500;
+      margin: 2.1875em 0; }
+    #header #showcase .showcase-content .primary-btn {
+      background-color: #784f33;
+      color: #fff;
+      margin-right: 1em; }
+      #header #showcase .showcase-content .primary-btn:hover {
+        background-color: #fff;
+        color: #784f33; }
+    #header #showcase .showcase-content .light-btn {
+      background-color: #fff;
+      color: #784f33; }
+      #header #showcase .showcase-content .light-btn:hover {
+        background-color: #784f33;
+        color: #fff; }
+  #header .laws {
+    position: relative;
+    top: 3.125em;
+    padding-top: 1.875em; }
+    #header .laws .law {
+      background-color: #fff;
+      padding: 2.1875em 5.5625em 2.1875em 2.5em;
+      box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07); }
+      #header .laws .law .law-header {
+        font-family: "Martel", serif;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 1.5em;
+        color: #252b42;
+        margin-top: 0.625em; }
+      #header .laws .law .law-paragraph {
+        color: #737373; }
+    #header .laws .law-primary {
+      background-color: #295c7a;
+      padding: 2.1875em 5.5625em 2.1875em 2.5em;
+      box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07); }
+      #header .laws .law-primary .law-header {
+        font-family: "Martel", serif;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 1.5em;
+        color: #fff;
+        margin-top: 0.625em; }
+      #header .laws .law-primary .law-paragraph {
+        color: #fff; }
+
+#main .clients-heading {
+  margin-bottom: 3em; }
+  #main .clients-heading .section-header {
+    font-family: "Martel", serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: #252b42; }
+  #main .clients-heading .section-paragraph {
+    color: #737373; }
+#main #clients {
+  margin-bottom: 80px;
+  text-align: center; }
+  #main #clients .client {
+    background-color: #fafafa;
+    padding: 1.875em 2.5em; }
+    #main #clients .client .client-heading {
+      font-family: "Martel", serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 2.5em;
+      color: #252b42; }
+    #main #clients .client .about-client {
+      font-family: "Martel", serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.8em;
+      color: #737373; }
+#main #about-us {
+  padding-bottom: 6em; }
+  #main #about-us .img-container {
+    width: 100%;
+    height: 500px; }
+    #main #about-us .img-container img {
+      width: 100%;
+      height: 100%; }
+  #main #about-us .about-heading {
+    margin-bottom: 3em;
+    text-align: center; }
+    #main #about-us .about-heading .section-header {
+      font-family: "Martel", serif;
+      text-transform: capitalize;
+      font-weight: 700;
+      font-size: 2.5em;
+      color: #252b42; }
+    #main #about-us .about-heading .section-paragraph {
+      color: #737373; }
+  #main #about-us .content-container {
+    margin-top: 1.5em; }
+    #main #about-us .content-container .content-header {
+      font-family: "Martel", serif;
+      text-transform: capitalize;
+      font-weight: 700;
+      font-size: 2.5em;
+      color: #252b42; }
+    #main #about-us .content-container .content-paragraph {
+      color: #737373; }
+    #main #about-us .content-container .characteristic {
+      display: flex; }
+      #main #about-us .content-container .characteristic .characteristic-content {
+        margin: 2.5em 0 0 1em; }
+        #main #about-us .content-container .characteristic .characteristic-content .charateristic-header {
+          font-family: "Martel", serif;
+          text-transform: lowercase;
+          font-weight: 700;
+          font-size: 1em;
+          color: #252b42; }
+        #main #about-us .content-container .characteristic .characteristic-content .characteristic-paragraph {
+          color: #737373; }
+#main #companies {
+  background-color: #fafafa;
+  padding: 4.4em 0; }
+#main #newsletter {
+  background-color: #252b42; }
+  #main #newsletter .subscription {
+    background-color: #295c7a;
+    padding: 1em 3.125em;
+    position: relative;
+    bottom: 20px; }
+    #main #newsletter .subscription .section-header {
+      font-family: "Martel", serif;
+      text-transform: capitalize;
+      font-weight: 700;
+      font-size: 1.5em;
+      color: #fff; }
+    #main #newsletter .subscription .form-container {
+      position: relative; }
+      #main #newsletter .subscription .form-container .mail-input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none; }
+      #main #newsletter .subscription .form-container .submit-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        padding: 0 1em;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        background-color: #d0a144;
+        color: #fff;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px; }
+#main #get-in-touch {
+  background-color: #fafafa;
+  padding: 5em 0; }
+  #main #get-in-touch .section-heading {
+    text-align: center; }
+    #main #get-in-touch .section-heading .section-header {
+      font-family: "Martel", serif;
+      text-transform: capitalize;
+      font-weight: 700;
+      font-size: 2.5em;
+      color: #252b42; }
+    #main #get-in-touch .section-heading .section-paragraph {
+      color: #737373; }
+  #main #get-in-touch .contact-ways {
+    text-align: center;
+    padding: 5em 0; }
+    #main #get-in-touch .contact-ways .contact-container {
+      align-items: center; }
+    #main #get-in-touch .contact-ways .contact-way, #main #get-in-touch .contact-ways .contact-way-primary {
+      background-color: #fff;
+      padding: 3.125em 3.75em; }
+      #main #get-in-touch .contact-ways .contact-way img, #main #get-in-touch .contact-ways .contact-way-primary img {
+        margin-bottom: 0.7em; }
+      #main #get-in-touch .contact-ways .contact-way p, #main #get-in-touch .contact-ways .contact-way-primary p {
+        font-size: 0.8em;
+        font-weight: 700; }
+      #main #get-in-touch .contact-ways .contact-way .request-btn, #main #get-in-touch .contact-ways .contact-way-primary .request-btn {
+        color: #d0a144;
+        padding: 0.625em 1.25em;
+        border: 1px solid #d0a144;
+        border-radius: 10px; }
+      #main #get-in-touch .contact-ways .contact-way .request-btn, #main #get-in-touch .contact-ways .contact-way-primary .request-btn {
+        transition: all 0.4s linear; }
+        #main #get-in-touch .contact-ways .contact-way .request-btn:hover, #main #get-in-touch .contact-ways .contact-way-primary .request-btn:hover {
+          text-decoration: none; }
+      #main #get-in-touch .contact-ways .contact-way .contact-header, #main #get-in-touch .contact-ways .contact-way-primary .contact-header {
+        font-family: "Martel", serif;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 1em;
+        color: #252b42;
+        margin-bottom: 0.9em; }
+    #main #get-in-touch .contact-ways .contact-way-primary {
+      background-color: #252b42;
+      padding: 5em 3.75em;
+      color: #fff; }
+      #main #get-in-touch .contact-ways .contact-way-primary .contact-header {
+        font-family: "Martel", serif;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 1em;
+        color: #fff; }
+
+#footer .consultation-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5em 0;
+  align-items: center; }
+  #footer .consultation-container .section-heading .section-header {
+    font-family: "Martel", serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #252b42; }
+  #footer .consultation-container .section-heading .section-paragraph {
+    color: #737373; }
+  #footer .consultation-container .contact {
+    background-color: #784f33;
+    color: #fff;
+    border-radius: 5px; }
+    #footer .consultation-container .contact:hover {
+      color: #784f33;
+      background-color: #fff; }
+#footer #footer-elements {
+  background-color: #295c7a;
+  padding: 3em 0; }
+  #footer #footer-elements .section-header {
+    font-family: "Martel", serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 1.2em; }
+  #footer #footer-elements li {
+    color: #fff; }
+    #footer #footer-elements li a {
+      color: #fff; }
+#footer #social-medias {
+  padding: 1.6em 0; }
+  #footer #social-medias .section-header {
+    font-family: "Open Sans", sans-serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 0.9em;
+    color: #737373; }
+  #footer #social-medias .social-media {
+    display: flex;
+    justify-content: flex-end; }
+    #footer #social-medias .social-media a {
+      padding: 0 0.5em; }
+
+@media screen and (max-width: 575px) {
+  #showcase {
+    margin-top: 4em; }
+    #showcase .showcase-content .btn-shared, #showcase .showcase-content .primary-btn, #showcase .showcase-content .light-btn {
+      display: block;
+      border: 1px solid #784f33;
+      font-weight: 600;
+      border-radius: 2.3125em;
+      padding: 0.625em 2.25em;
+      text-decoration: none;
+      transition: all 0.3s linear; }
+      #showcase .showcase-content .btn-shared:hover, #showcase .showcase-content .primary-btn:hover, #showcase .showcase-content .light-btn:hover {
+        text-decoration: none; }
+    #showcase .showcase-content .primary-btn {
+      background-color: #784f33;
+      color: #fff;
+      margin-right: 1em; }
+      #showcase .showcase-content .primary-btn:hover {
+        background-color: #fff;
+        color: #784f33; }
+    #showcase .showcase-content .light-btn {
+      background-color: #fff;
+      color: #784f33;
+      margin: 1em 1em 0 0; }
+      #showcase .showcase-content .light-btn:hover {
+        background-color: #784f33;
+        color: #fff; }
+
+  #companies {
+    background-color: #fafafa;
+    padding: 4.4em 0; }
+    #companies .company-container {
+      text-align: center;
+      padding: 3em 0; }
+
+  #footer .consultation-container {
+    flex-direction: column; }
+  #footer #social-medias .social-media {
+    justify-content: flex-start; } }
+@media screen and (max-width: 767px) {
+  #header .navbar .logo-hamburger .icons .hamburger {
+    display: block; }
+  #header .navbar .logo-hamburger .icons .search,
+  #header .navbar .logo-hamburger .icons .cart {
+    display: block; }
+  #header .navbar .nav-menu {
+    display: none; }
+    #header .navbar .nav-menu.show {
+      display: flex;
+      flex-direction: column; }
+    #header .navbar .nav-menu .nav-item {
+      padding-right: 0;
+      padding-top: 1.3125em;
+      font-size: 1.875em; }
+    #header .navbar .nav-menu .nav-link::before {
+      top: 40px; } }
+@media screen and (max-width: 991px) {
+  .laws {
+    position: relative;
+    bottom: 10em;
+    padding-top: 0; }
+    .laws .law {
+      margin-right: 0;
+      margin-top: 30px; }
+    .laws .law-primary {
+      margin-right: 0;
+      margin-top: 1.875em; }
+
+  #clients .client {
+    margin-top: 1.875em; } }

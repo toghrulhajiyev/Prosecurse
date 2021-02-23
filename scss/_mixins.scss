@@ -1,0 +1,40 @@
+// Headers
+@mixin section-header(
+  $font-family,
+  $transform,
+  $font-weight,
+  $font-size,
+  $text-color
+) {
+  font-family: $font-family;
+  text-transform: $transform;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $text-color;
+}
+
+// Law box
+@mixin lawBox(
+  $bg-color,
+  $padding-top,
+  $padding-right,
+  $padding-bottom,
+  $padding-left,
+  $shadow
+) {
+  background-color: $bg-color;
+  padding: $padding-top $padding-right $padding-bottom $padding-left;
+  box-shadow: $shadow;
+}
+
+// Client box
+@mixin client-box($bg-color, $padding-top-bottom, $padding-right-left) {
+  background-color: $bg-color;
+  padding: $padding-top-bottom $padding-right-left;
+}
+
+// Contact Way
+@mixin contact-way($bg-color, $padding-top-bottom, $padding-left-right) {
+  background-color: $bg-color;
+  padding: $padding-top-bottom $padding-left-right;
+}

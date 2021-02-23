@@ -1,0 +1,711 @@
+@import "variables";
+@import "mixins";
+
+// Common Styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  font-family: $main-font;
+}
+
+// Utility Class
+%heading-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+%btn-shared {
+  border: 1px solid $link-color;
+  font-weight: 600;
+  border-radius: 2.3125em;
+  padding: 0.625em 2.25em;
+  text-decoration: none;
+  transition: all 0.3s linear;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Header
+#header {
+  background-image: url("../img/header-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 8em;
+
+  // Navbar
+  .navbar {
+    padding: 1em 0;
+
+    .logo-hamburger {
+      display: flex;
+      justify-content: space-between;
+
+      .icons {
+        display: flex;
+        padding: 1em 0;
+        align-items: center;
+
+        .icon {
+          padding-left: 0.8em;
+        }
+
+        .hamburger {
+          display: none;
+          border: none;
+          background-color: transparent;
+          font-size: 20px;
+          cursor: pointer;
+        }
+
+        .search,
+        .cart {
+          display: none;
+        }
+      }
+    }
+
+    .nav-menu {
+      display: flex;
+      padding: 1em 0;
+      align-items: center;
+      margin-bottom: 0;
+
+      .nav-item {
+        padding-right: 1.3125em;
+      }
+
+      .nav-link {
+        position: relative;
+        color: $secondary-text-color;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &::before {
+          content: "";
+          width: 0%;
+          height: 2px;
+          background-color: $secondary-text-color;
+          transition: all 0.2s linear;
+          position: absolute;
+          top: 25px;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // Showcase
+  #showcase {
+    margin-top: 4em;
+
+    .showcase-content {
+      .showcase-header {
+        @include section-header(
+          $header-font,
+          uppercase,
+          900,
+          3.625em,
+          $main-text-color
+        );
+        line-height: 65px;
+      }
+
+      .showcase-paragraph {
+        font-family: "Montserrat", sans-serif;
+        color: $secondary-text-color;
+        font-weight: 500;
+        margin: 2.1875em 0;
+      }
+
+      // Showcase Button
+      .primary-btn {
+        @extend %btn-shared;
+        background-color: $link-color;
+        color: $white-color;
+        margin-right: 1em;
+
+        &:hover {
+          background-color: $white-color;
+          color: $link-color;
+        }
+      }
+
+      .light-btn {
+        @extend %btn-shared;
+        background-color: $white-color;
+        color: $link-color;
+
+        &:hover {
+          background-color: $link-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+
+  // Laws
+  .laws {
+    position: relative;
+    top: 3.125em;
+    padding-top: 1.875em;
+    .law {
+      @include lawBox(
+        $white-color,
+        2.1875em,
+        5.5625em,
+        2.1875em,
+        2.5em,
+        $shadow
+      );
+
+      .law-header {
+        @include section-header(
+          $header-font,
+          capitalize,
+          700,
+          1.5em,
+          $main-text-color
+        );
+        margin-top: 0.625em;
+      }
+
+      .law-paragraph {
+        color: $secondary-text-color;
+      }
+    }
+
+    .law-primary {
+      @include lawBox(
+        $light-bg-color,
+        2.1875em,
+        5.5625em,
+        2.1875em,
+        2.5em,
+        $shadow
+      );
+
+      .law-header {
+        @include section-header(
+          $header-font,
+          capitalize,
+          700,
+          1.5em,
+          $white-color
+        );
+        margin-top: 0.625em;
+      }
+
+      .law-paragraph {
+        color: $white-color;
+      }
+    }
+  }
+}
+
+// Main
+#main {
+  .clients-heading {
+    @extend %heading-container;
+    margin-bottom: 3em;
+
+    .section-header {
+      @include section-header(
+        $header-font,
+        capitalize,
+        700,
+        2.5em,
+        $main-text-color
+      );
+    }
+
+    .section-paragraph {
+      color: $secondary-text-color;
+    }
+  }
+
+  // Clients
+  #clients {
+    margin-bottom: 80px;
+    text-align: center;
+
+    .client {
+      @include client-box($grey-color, 1.875em, 2.5em);
+
+      .client-heading {
+        @include section-header(
+          $header-font,
+          uppercase,
+          700,
+          2.5em,
+          $main-text-color
+        );
+      }
+
+      .about-client {
+        @include section-header(
+          $header-font,
+          uppercase,
+          700,
+          0.8em,
+          $secondary-text-color
+        );
+      }
+    }
+  }
+
+  // About Us
+  #about-us {
+    padding-bottom: 6em;
+
+    .img-container {
+      width: 100%;
+      height: 500px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .about-heading {
+      @extend %heading-container;
+      margin-bottom: 3em;
+      text-align: center;
+
+      .section-header {
+        @include section-header(
+          $header-font,
+          capitalize,
+          700,
+          2.5em,
+          $main-text-color
+        );
+      }
+
+      .section-paragraph {
+        color: $secondary-text-color;
+      }
+    }
+
+    .content-container {
+      margin-top: 1.5em;
+
+      .content-header {
+        @include section-header(
+          $header-font,
+          capitalize,
+          700,
+          2.5em,
+          $main-text-color
+        );
+      }
+
+      .content-paragraph {
+        color: $secondary-text-color;
+      }
+
+      .characteristic {
+        display: flex;
+
+        .characteristic-content {
+          margin: 2.5em 0 0 1em;
+          .charateristic-header {
+            @include section-header(
+              $header-font,
+              lowercase,
+              700,
+              1em,
+              $main-text-color
+            );
+          }
+
+          .characteristic-paragraph {
+            color: $secondary-text-color;
+          }
+        }
+      }
+    }
+  }
+
+  // Companies
+  #companies {
+    background-color: $grey-color;
+    padding: 4.4em 0;
+  }
+
+  // Newsletter
+  #newsletter {
+    background-color: $dark-background-color;
+
+    .subscription {
+      background-color: $light-bg-color;
+      padding: 1em 3.125em;
+      position: relative;
+      bottom: 20px;
+
+      .section-header {
+        @include section-header(
+          $header-font,
+          capitalize,
+          700,
+          1.5em,
+          $white-color
+        );
+      }
+
+      .form-container {
+        position: relative;
+
+        .mail-input {
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          border: none;
+        }
+
+        .submit-btn {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          padding: 0 1em;
+          border: none;
+          font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+          background-color: $submit-color;
+          color: #fff;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+      }
+    }
+  }
+
+  // Get-In-Touch
+  #get-in-touch {
+    background-color: $grey-color;
+    padding: 5em 0;
+
+    .section-heading {
+      @extend %heading-container;
+      text-align: center;
+
+      .section-header {
+        @include section-header(
+          $header-font,
+          capitalize,
+          700,
+          2.5em,
+          $main-text-color
+        );
+      }
+
+      .section-paragraph {
+        color: $secondary-text-color;
+      }
+    }
+
+    .contact-ways {
+      text-align: center;
+      padding: 5em 0;
+
+      .contact-container {
+        align-items: center;
+      }
+
+      .contact-way {
+        @include contact-way($white-color, 3.125em, 3.75em);
+
+        img {
+          margin-bottom: 0.7em;
+        }
+
+        p {
+          font-size: 0.8em;
+          font-weight: 700;
+        }
+
+        %btn {
+          color: $submit-color;
+          padding: 0.625em 1.25em;
+          border: 1px solid $submit-color;
+          border-radius: 10px;
+        }
+
+        .request-btn {
+          @extend %btn;
+          transition: all 0.4s linear;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        .contact-header {
+          @include section-header(
+            $header-font,
+            capitalize,
+            700,
+            1em,
+            $main-text-color
+          );
+          margin-bottom: 0.9em;
+        }
+      }
+
+      .contact-way-primary {
+        @extend .contact-way;
+        @include contact-way($dark-background-color, 5em, 3.75em);
+        color: $white-color;
+
+        .contact-header {
+          @include section-header(
+            $header-font,
+            capitalize,
+            700,
+            1em,
+            $white-color
+          );
+        }
+      }
+    }
+  }
+}
+
+// Footer
+#footer {
+  // Consultation
+  .consultation-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5em 0;
+    align-items: center;
+
+    .section-heading {
+      .section-header {
+        @include section-header(
+          $header-font,
+          capitalize,
+          700,
+          1.5em,
+          $main-text-color
+        );
+      }
+
+      .section-paragraph {
+        color: $secondary-text-color;
+      }
+    }
+
+    .contact {
+      @extend %btn-shared;
+      background-color: $link-color;
+      color: $white-color;
+      border-radius: 5px;
+
+      &:hover {
+        color: $link-color;
+        background-color: #fff;
+      }
+    }
+  }
+
+  // Footer Elements
+  #footer-elements {
+    background-color: $light-bg-color;
+    padding: 3em 0;
+
+    .section-header {
+      @include section-header($header-font, capitalize, 700, 1em, $white-color);
+      margin-bottom: 1.2em;
+    }
+
+    li {
+      color: $white-color;
+
+      a {
+        color: $white-color;
+      }
+    }
+  }
+
+  // Social Media
+  #social-medias {
+    padding: 1.6em 0;
+
+    .section-header {
+      @include section-header(
+        $main-font,
+        capitalize,
+        700,
+        0.9em,
+        $secondary-text-color
+      );
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+        padding: 0 0.5em;
+      }
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: 575px) {
+  // Showcase
+  #showcase {
+    margin-top: 4em;
+
+    .showcase-content {
+      // Showcase Buttons
+      .btn-shared {
+        display: block;
+        border: 1px solid $link-color;
+        font-weight: 600;
+        border-radius: 2.3125em;
+        padding: 0.625em 2.25em;
+        text-decoration: none;
+        transition: all 0.3s linear;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .primary-btn {
+        @extend .btn-shared;
+        background-color: $link-color;
+        color: $white-color;
+        margin-right: 1em;
+
+        &:hover {
+          background-color: $white-color;
+          color: $link-color;
+        }
+      }
+
+      .light-btn {
+        @extend .btn-shared;
+        background-color: $white-color;
+        color: $link-color;
+        margin: 1em 1em 0 0;
+
+        &:hover {
+          background-color: $link-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+
+  // Companies
+  #companies {
+    background-color: $grey-color;
+    padding: 4.4em 0;
+
+    .company-container {
+      text-align: center;
+      padding: 3em 0;
+    }
+  }
+
+  // Footer(Consultation)
+  #footer {
+    .consultation-container {
+      flex-direction: column;
+    }
+
+    // Social Medias
+    #social-medias {
+      .social-media {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #header {
+    // Navbar
+    .navbar {
+      .logo-hamburger {
+        .icons {
+          .hamburger {
+            display: block;
+          }
+
+          .search,
+          .cart {
+            display: block;
+          }
+        }
+      }
+
+      .nav-menu {
+        display: none;
+
+        &.show {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .nav-item {
+          padding-right: 0;
+          padding-top: 1.3125em;
+          font-size: 1.875em;
+        }
+
+        .nav-link {
+          &::before {
+            top: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  // Laws
+  .laws {
+    position: relative;
+    bottom: 10em;
+    padding-top: 0;
+    .law {
+      margin-right: 0;
+      margin-top: 30px;
+    }
+
+    .law-primary {
+      margin-right: 0;
+      margin-top: 1.875em;
+    }
+  }
+
+  // Clients
+  #clients {
+    .client {
+      margin-top: 1.875em;
+    }
+  }
+}
